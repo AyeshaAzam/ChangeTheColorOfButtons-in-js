@@ -18,45 +18,29 @@ console.log("copyAllButtons", copyAllButtons);
 function buttonColorChange(buttons) {
   //console.log(buttons.value);
   if (buttons.value === "red") {
-    buttonRed();
+    buttonSetColor(allButtons, "btn-danger");
   } else if (buttons.value === "green") {
-    buttonGreen();
+    buttonSetColor(allButtons, "btn-success");
   } else if (buttons.value === "blue") {
-    buttonBlue();
+    buttonSetColor(allButtons, "btn-primary");
   } else if (buttons.value === "random") {
     randomColors();
   } else if (buttons.value === "reset") {
-    buttonColorReset();
+    buttonColorReset(allButtons);
   }
 }
 
-function buttonRed() {
-  // loop through all buttons
-  for (let i = 0; i < allButtons.length; i++) {
-    allButtons[i].classList.remove(allButtons[i].classList[1]); // remove all second class with 'btn-success'/'btn-danger'/'btn-primary
-    allButtons[i].classList.add("btn-danger");
+function buttonSetColor(buttons, buttonColorClassName) {
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove(buttons[i].classList[1]); // remove all second class with 'btn-success'/'btn-danger'/'btn-primary
+    buttons[i].classList.add(buttonColorClassName);
   }
 }
 
-function buttonGreen() {
-  for (let i = 0; i < allButtons.length; i++) {
-    //console.log("i is what", i, allButtons[i]);
-    allButtons[i].classList.remove(allButtons[i].classList[1]); // remove second class 'btn-success'
-    allButtons[i].classList.add("btn-success"); // and add the class with name btn-success
-  }
-}
-
-function buttonBlue() {
-  for (let i = 0; i < allButtons.length; i++) {
-    allButtons[i].classList.remove(allButtons[i].classList[1]); // remove all second class with 'btn-success'/'btn-danger'/'btn-primary
-    allButtons[i].classList.add("btn-primary");
-  }
-}
-
-function buttonColorReset() {
-  for(let i = 0; i < allButtons.length; i++ ){
-    allButtons[i].classList.remove(allButtons[i].classList[1]);
-    allButtons[i].classList.add(copyAllButtons[i]) // this will add appropriate class to the buttons
+function buttonColorReset(buttons) {
+  for(let i = 0; i < buttons.length; i++ ){
+    buttons[i].classList.remove(buttons[i].classList[1]);
+    buttons[i].classList.add(copyAllButtons[i]) // this will add appropriate class to the buttons
   }
 }
 
@@ -69,5 +53,4 @@ function randomColors() {
     allButtons[i].classList.remove(allButtons[i].classList[1]);
     allButtons[i].classList.add(choices[randomNumber]); //choices[3] / choices[0] /choices[1]
   }
-
 }
