@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change the color of all Buttons</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/6b4f31be1a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h2 id="change-my-color">Change the color of all Buttons-app</h2>
+    <div class="flex-box-pick-color">
+      <form action="">
+        <select name="backdrop" id="background" onchange="buttonColorChange(this)">
+          <option value="random">Random</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="reset">Reset</option>
+        </select>
+      </form>
+
+      <button type="button" class="btn btn-primary">Wee!</button>
+      <button type="button" class="btn btn-danger">Yahoo!</button>
+      <button type="button" class="btn btn-warning">Google!</button>
+      <button type="button" class="btn btn-success">Facebook!</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
