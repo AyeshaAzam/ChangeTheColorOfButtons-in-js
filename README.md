@@ -3,4 +3,4 @@ Simple project where when select different options will change the color of the 
 
 ### 
 
- <img src="https://github.com/AyeshaAzam/Simple-TextEditor-project-JavaScript/blob/master/images/textEditor-Project.PNG" />
+ <img src="https://github.com/AyeshaAzam/ChangeTheColorOfButtons-in-js/blob/master/images/colorChange-blue.PNG" />
